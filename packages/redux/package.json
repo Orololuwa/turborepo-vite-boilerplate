@@ -1,0 +1,19 @@
+{
+  "name": "@repo/redux",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "lint": "eslint \"**/*.ts\""
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7",
+    "react-redux": "^9.1.2"
+  }
+}
