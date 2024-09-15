@@ -13,6 +13,8 @@ import {
   useColorMode,
   Center,
 } from "@chakra-ui/react";
+import { useAppSelector } from "@repo/redux";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   children: React.ReactNode;
@@ -40,11 +42,19 @@ export const NavLink = (props: Props) => {
 
 export const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+
+  const count = useAppSelector((state) => state.counter.value);
+
+  const navigate = useNavigate();
   return (
-    <>
+    <Box w="100%">
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>Logo</Box>
+          <Box>{count}</Box>
+          <Button onClick={() => navigate("/app-package")}>
+            to app-package
+          </Button>
 
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>
@@ -88,6 +98,6 @@ export const Nav = () => {
           </Flex>
         </Flex>
       </Box>
-    </>
+    </Box>
   );
 };

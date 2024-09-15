@@ -1,6 +1,9 @@
 {
   "name": "@repo/redux",
   "version": "0.0.0",
+  "exports": {
+    ".": "./index.ts"
+  },
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",

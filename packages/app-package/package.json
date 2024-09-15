@@ -1,27 +1,23 @@
 {
-  "name": "@repo/ui",
+  "name": "@repo/app-package",
   "version": "0.0.0",
   "exports": {
-    ".": "./index.ts"
+    ".": "./src/App.tsx",
+    "./routes": "./src/routes.tsx"
   },
-  "license": "MIT",
   "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
     "lint": "eslint \"**/*.ts\""
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
-    "@repo/redux": "*",
     "@repo/typescript-config": "*",
     "eslint": "^8.57.0",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "framer-motion": "^11.5.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@repo/redux": "*",
     "react-router-dom": "^6.26.2"
   }
 }
